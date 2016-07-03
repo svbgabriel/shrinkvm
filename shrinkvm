@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run as root" 1>&2
+   exit 1
+fi
+
+echo "Please ignore any messages about disk space during this process"
+
+dd if=/dev/zero of=/dump.file bs=4096k
+rm /dump.file
