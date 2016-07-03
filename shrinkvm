@@ -7,5 +7,5 @@ fi
 
 echo "Please ignore any messages about disk space during this process"
 
-dd if=/dev/zero of=/dump.file bs=4096k
-rm /dump.file
+dd if=/dev/zero of=/dump.file bs=4096k >/dev/null 2>&1
+rm /dump.file >/dev/null 2>&1
