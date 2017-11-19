@@ -9,3 +9,5 @@ echo "Please ignore any messages about disk space during this process"
 
 dd if=/dev/zero of=/dump.file bs=4096k >/dev/null 2>&1
 rm /dump.file >/dev/null 2>&1
+
+echo "Process complete! Now on the host machine run "VBoxManage modifyhd /path/to/thedisk.vdi --compact""
